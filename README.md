@@ -22,7 +22,8 @@ The databases will create once - at first application's run.
 + Install python3-venv package (if it's already exist - skip) by `sudo apt install python3-venv`.
 + Venv initialization: run [venv-init.txt](https://github.com/lmiz100/URL-shortening/blob/master/venv-init) script by `./venv-init`.
 + run application: use [run.txt](https://github.com/lmiz100/URL-shortening/blob/master/run) by `./run`.
-+ If you want reset DBs, use `./run-and-reset`.<br />
++ If you want reset DBs, use `./run-and-reset`.
+<br />
 Now, when the app running, enter http://localhost:5000/ from some browser and enjoy the service!
 
 

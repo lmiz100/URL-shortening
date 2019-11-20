@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html>
+    <head>
+        <style> 
+        .textarea {
+            margin: auto;
+            width: 90%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #b3d9ff;
+            font-size: 20px;
+            resize: none;
+        }
+        .button {
+         background-color: #d0d0e1;
+         border-radius: 8px;
+         border: 1px solid darkblue;
+         color: black;
+         padding: 20px 34px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+         .buttonDiv{
+            text-align: center;
+         }
+        </style>
+    </head>
+
+    <body>
+        <h1 style = "text-align: center;">Service stats</h1>
+		<br>
+        <div class="textarea">
+            <ul>
+                <li> Database includes <b> {{ total_urls }} </b> URL redirections. <br> </li>
+                <li> Total redirections requests : <b> {{ total_requests }} </b> <br> </li>
+                <li> URL redirections performance in the last (minute, hour, day): <b> ({{ req_min }}, {{ req_hour}}, {{ req_day }}) </b> <br> </li>
+                <li> Bad requests performance in the last (minute, hour, day): <b> ({{ bad_min }}, {{ bad_hour}}, {{ bad_day }}) </b> <br> </li>
+            </ul>
+        </div>
+        <br>
+        <div class="buttonDiv">
+            <a href="{{ url_for('home') }}" class="button">Go to main page</a>
+        </div>
+        
+          
+   </body>
+</html>

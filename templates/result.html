@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+    <head>
+        <style> 
+        .textarea {
+            margin: auto;
+            width: 90%;
+            height: 100px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #99ff66;
+            font-size: 20px;
+            resize: none;
+        }
+        .button {
+         background-color: #d0d0e1;
+         border-radius: 8px;
+         border: 1px solid darkblue;
+         color: black;
+         padding: 20px 34px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+         .buttonDiv{
+            text-align: center;
+         }
+        </style>
+    </head>
+
+    <body>
+        <h1 style = "text-align: center;">Get your short link now!</h1>
+		<br>
+        <div class="textarea">
+                Your new link to {{ old_link }} is:
+                <a href="{{ new_link }}"><b> {{ new_link }} </b> </a>
+
+        </div>
+        <br>
+        <div class="buttonDiv">
+            <a target="_blank" rel="noopener noreferrer" href="{{ new_link }}" class="button">Open your web in new window</a>
+            <a href="{{ url_for('home') }}" class="button">Go to main page</a>
+        </div>
+        
+   </body>
+</html>
